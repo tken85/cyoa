@@ -228,6 +228,20 @@ var decreaseScore = function() {
 
 // Put your answer below -------------------------
 
+(function(){
+    var score = 0;
+})();
+
+var increaseScore = function() {
+  score++;
+};
+
+var decreaseScore = function() {
+  score--;
+};
+
+
+
 
 // -----------------------------------------------
 
@@ -278,6 +292,8 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
+
+// Failing to give a parameter makes that parameter undefined. You are then trying to add a float and an undefined which is an invalid arithmetic operation resulting in a NaN creation
 
 var accelerate = function(amount){
   if(amount === undefined){
