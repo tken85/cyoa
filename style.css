@@ -1,0 +1,47 @@
+.container{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px dotted black;
+}
+
+p{
+  font-color: red;
+}
+#game-text{
+  height: 400px;
+  width: 98%;
+  margin: 0 auto;
+  background-color: red;
+  border: 2px dotted black;
+  padding: 20% 0;
+
+}
+#score{
+  height: 200px;
+  width: 20%;
+  display: inline-block;
+  background-color: gray;
+  border: 2px dotted black;
+}
+#choices{
+  height: 200px;
+  width: 78%;
+  background-color: yellow;
+  display: inline-block;
+  border: 2px dotted black;
+}
+
+button{
+  width: 100px;
+  height: 80px;
+  border-radius: 5px;
+  background-color: gray;
+  border: 1px solid black;
+  font-color: black;
+}
+
+button:hover{
+  background-color: yellow;
+  color: red;
+}
