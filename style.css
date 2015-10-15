@@ -6,15 +6,16 @@
 }
 
 p{
-  font-color: red;
+  color: red;
 }
 #game-text{
   height: 400px;
   width: 98%;
   margin: 0 auto;
-  background-color: red;
-  border: 2px dotted black;
+  background-color: white;
+  border: 2px dotted red;
   padding: 20% 0;
+  color: black;
 
 }
 #score{
@@ -38,7 +39,12 @@ button{
   border-radius: 5px;
   background-color: gray;
   border: 1px solid black;
-  font-color: black;
+  color: black;
+  display: block;
+  text-align: center;
+  margin-left: 45%;
+  margin-top: 2%;
+  clear: both;
 }
 
 button:hover{

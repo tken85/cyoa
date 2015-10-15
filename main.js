@@ -9,8 +9,12 @@ function clearText(){
 var start = function(){
   var text = "You and your friends come across a haunted house during a dark and stormy night. Your friends are in the Halloween spirit and want to proceed inside. They egg you on. Do you go in?";
 
-  document.getElementById("game-text").innerHTML = text;
-/*
+  document.getElementById("game-text").innerHTML = text + "<button onClick='goIn()'>Go In</button>"+"<button onClick='leave()'>Leave</button>";
+
+  }
+
+
+/* Trying different ways to get it over.
     var b1 = document.createElement("BUTTON");
     var b1Text = document.createTextNode("Go In");
     b1.appendChild(b1Text);
@@ -23,16 +27,16 @@ var start = function(){
     b2.onClick = function(){leave()};
     document.getElementById("choices").appendChild(b2);*/
 
-    var playerChoice=prompt("Type 1 to Go in or 2 to Leave");
+    /*var playerChoice=prompt("Type 1 to Go in or 2 to Leave");
 
     if(playerChoice === "1"){
       goIn();
     }
     else if(playerChoice === "2"){
       leave();
-    }
+    }*/
 
-}
+
 
 var goIn = function(){
 
@@ -40,18 +44,10 @@ var goIn = function(){
 
   var text = "You build up every bit of courage in your body and head inside. The door creaks and lighting crashes down nearby. You’re all in now. Should you split up to check more rooms or stay together?";
 
-  document.getElementById("game-text").innerHTML = text;
-
-  var playerChoice=prompt("Type 1 to Split-Up or 2 to Stay Together");
-
-  if(playerChoice === "1"){
-    splUp();
-  }
-  else if(playerChoice === "2"){
-    stay();
-  }
+  document.getElementById("game-text").innerHTML = text + "<button onClick='splUp()'>Split Up</button>"+"<button onClick='stay()'>Stay</button>";
 
 }
+
 var leave = function(){
 
   score += 1000;
@@ -66,11 +62,11 @@ var leave = function(){
 var splUp = function(){
   score -= 100;
 
-  var text = "Have you never seen a horror movie. Why would you not stay together?";
+  var text = "Have you never seen a horror movie? Why would you not stay together?";
 
-  document.getElementById("game-text").innerHTML = text;
+  document.getElementById("game-text").innerHTML = text + "<button onClick='upStairs()'>Upstairs</button>"+"<button onClick='downStairs()'>Downstairs</button>";
 
-  var playerChoice=prompt("Type 1 to go Upstairs or 2 to search Downstairs");
+  /*var playerChoice=prompt("Type 1 to go Upstairs or 2 to search Downstairs");
 
   if(playerChoice === "1"){
     upStairs();
@@ -78,7 +74,7 @@ var splUp = function(){
   else if(playerChoice === "2"){
     downStairs();
   }
-
+*/
 }
 
 
@@ -87,16 +83,16 @@ var stay = function(){
 
   var text = "You’re smart, but unfortunately, your friends aren’t. They insist on splitting up. ";
 
-  document.getElementById("game-text").innerHTML = text;
+  document.getElementById("game-text").innerHTML = text + "<button onClick='upStairs()'>Upstairs</button>"+"<button onClick='downStairs()'>Downstairs</button>";
 
-  var playerChoice=prompt("Type 1 to go Upstairs or 2 to search Downstairs");
+  /*var playerChoice=prompt("Type 1 to go Upstairs or 2 to search Downstairs");
 
   if(playerChoice === "1"){
     upStairs();
   }
   else if(playerChoice === "2"){
     downStairs();
-  }
+  }*/
 
 }
 
@@ -104,11 +100,12 @@ var upStairs = function(){
 
   score += 20;
 
+
   var text = "A dark figure hovers above the top of the stairs. As you near you hear “muahahahaha”. The pale vampire flashes his fangs in intimidation. If you want to pass you will prove your worth and beat me in a game of skill and intellect! We will play Dracula, Van Helsing, Old Age! The rules are simple (yet make no sense to me as Dracula should beat everything because he’s awesome). Dracula beats Old Age with his immortality, Van Helsing beats Dracula with his stake, and Old Age beats Van Helsing with arthritis and heart failure. On the count of three we each choose.";
 
-  document.getElementById("game-text").innerHTML = text;
+  document.getElementById("game-text").innerHTML = text + "<button onClick='drac()'>Dracula</button>"+"<button onClick='vanHel()'>Van Helsing</button>"+"<button onClick='oldAge()'>Old Age</button>";
 
-  var playerChoice=prompt("Type 1 for Dracula, 2 for Van Helsing, or 3 for Old Age");
+  /*var playerChoice=prompt("Type 1 for Dracula, 2 for Van Helsing, or 3 for Old Age");
 
   if(playerChoice === "1"){
     dracVanOld("Dracula");
@@ -118,7 +115,7 @@ var upStairs = function(){
   }
   else{
     dracVanOld("Old Age");
-  }
+  }*/
 }
 
 var downStairs = function(){
@@ -126,16 +123,16 @@ var downStairs = function(){
 
   var text = "Screw cardio. You might need to save your energy for running later, so you wisely stick to the easier route. You hear a loud crash coming from the other room. Do you explore it or run away?";
 
-  document.getElementById("game-text").innerHTML = text;
+  document.getElementById("game-text").innerHTML = text + "<button onClick='explore()'>Explore</button>"+"<button onClick='runAway()'>Run Away</button>";
 
-  var playerChoice=prompt("Type 1 to Explore or 2 to Run Away");
+  /*var playerChoice=prompt("Type 1 to Explore or 2 to Run Away");
 
   if(playerChoice === "1"){
     explore();
   }
   else if(playerChoice === "2"){
     runAway();
-  }
+  }*/
 
 }
 
@@ -153,9 +150,8 @@ var explore = function (){
 
   var text = "As you approach you make out the sound of music. It gets louder and louder followed by the loud thumps of dancing. You thought these only existed in fiction, but you have encountered a mythical Werewolf Barmitzvah! Boys becoming men. Men becoming wolves. Welcome, human! An elderly werewolf exclaims. If you want to join our party as a guest, you’re going to have to impress us with some fresh dance moves. What dance do you try?";
 
-  document.getElementById("game-text").innerHTML = text;
-
-  var playerChoice=prompt("Type 1 to do the Robot or 2 to do the Running Man");
+  document.getElementById("game-text").innerHTML = text + "<button onClick='theRobot()'>Robot</button>"+"<button onClick='runningMan()'>Running Man</button>";
+  /*var playerChoice=prompt("Type 1 to do the Robot or 2 to do the Running Man");
 
   if(playerChoice === "1"){
     danceOff("Robot");
@@ -163,6 +159,7 @@ var explore = function (){
   else if(playerChoice === "2"){
     danceOff("Running Man");
   }
+*/
 }
 var danceOff = function(danceMove){
 
@@ -189,6 +186,14 @@ var danceOff = function(danceMove){
     danceLose();
   }
 
+}
+
+var theRobot = function(){
+  danceOff("Robot");
+}
+
+var runningMan = function(){
+  danceOff("Running Man");
 }
 
 var danceWin = function(){
@@ -260,6 +265,18 @@ var dracVanOld = function(playerChoice){
       dracLoss(vampChoice);
     }
   }
+}
+
+
+var drac = function(){
+  dracVanOld("Dracula");
+}
+var vanHel = function(){
+  dracVanOld("Van Helsing");
+}
+
+var oldAge = function(){
+  dracVanOld("Old Age");
 }
 
 var dracWin = function(vampChoice){
