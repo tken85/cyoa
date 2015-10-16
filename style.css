@@ -40,11 +40,10 @@ button{
   background-color: gray;
   border: 1px solid black;
   color: black;
-  display: block;
+  display: inline-block;
   text-align: center;
-  margin-left: 45%;
   margin-top: 2%;
-  clear: both;
+
 }
 
 button:hover{
