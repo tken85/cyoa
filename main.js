@@ -18,7 +18,7 @@ var goIn = function(){
   var text = "You build up every bit of courage in your body and head inside. The door creaks and lighting crashes down nearby. You’re all in now. Should you split up to check more rooms or stay together?";
 
   document.getElementById("game-text").innerHTML = text + "<br>" + "<button onClick='splUp()'>Split Up</button>"+"<button onClick='stay()'>Stay Together</button>";
-
+  document.getElementById("current-score").innerHTML = score.toString();
 }
 
 var leave = function(){
@@ -28,6 +28,8 @@ var leave = function(){
   var text = "You gained 1000 points for making a good life decision. You go home and spend the night watching Netflix and eating pizza. No matter how many mocking texts your friends send you, you know nothing is better than the Netflix and chill option in life.  At least you’ll always have your Facebook friends… The End. You finished with a score of " + score + "<br>" + "<button onClick='reset()'>Play Again</button>";
 
   document.getElementById("game-text").innerHTML = text;
+  document.getElementById("current-score").innerHTML = score.toString();
+
 
 
 }
@@ -38,7 +40,7 @@ var splUp = function(){
   var text = "Have you never seen a horror movie? Why would you not stay together?";
 
   document.getElementById("game-text").innerHTML = text + "<br>" + "<button onClick='upStairs()'>Upstairs</button>"+"<button onClick='downStairs()'>Downstairs</button>";
-
+  document.getElementById("current-score").innerHTML = score.toString();
 }
 
 
@@ -48,7 +50,7 @@ var stay = function(){
   var text = "You’re smart, but unfortunately, your friends aren’t. They insist on splitting up. ";
 
   document.getElementById("game-text").innerHTML = text + "<br>" + "<button onClick='upStairs()'>Upstairs</button>"+"<button onClick='downStairs()'>Downstairs</button>";
-
+  document.getElementById("current-score").innerHTML = score.toString();
 }
 
 var upStairs = function(){
@@ -59,7 +61,7 @@ var upStairs = function(){
   var text = "A dark figure hovers above the top of the stairs. As you near you hear “muahahahaha”. The pale vampire flashes his fangs in intimidation. If you want to pass you will prove your worth and beat me in a game of skill and intellect! We will play Dracula, Van Helsing, Old Age! The rules are simple (yet make no sense to me as Dracula should beat everything because he’s awesome). Dracula beats Old Age with his immortality, Van Helsing beats Dracula with his stake, and Old Age beats Van Helsing with arthritis and heart failure. On the count of three we each choose.";
 
   document.getElementById("game-text").innerHTML = text + "<br>" + "<button onClick='drac()'>Dracula</button>"+"<button onClick='vanHel()'>Van Helsing</button>"+"<button onClick='oldAge()'>Old Age</button>";
-
+  document.getElementById("current-score").innerHTML = score.toString();
 
 }
 
@@ -69,7 +71,7 @@ var downStairs = function(){
   var text = "Screw cardio. You might need to save your energy for running later, so you wisely stick to the easier route. You hear a loud crash coming from the other room. Do you explore it or run away?";
 
   document.getElementById("game-text").innerHTML = text + "<br>" + "<button onClick='explore()'>Explore</button>"+"<button onClick='runAway()'>Run Away</button>";
-
+  document.getElementById("current-score").innerHTML = score.toString();
 
 }
 
@@ -79,7 +81,7 @@ var runAway = function (){
   var text = "In such a rush to leave you run into a door and are knocked out. You awake in the morning to find that you survived a night in the haunted house, but are now covered in unmentionable markings. Some great friends you have there. The End. You finished with a final score of " + score + "<br>" + "<button onClick='reset()'>Play Again</button>";
 
   document.getElementById("game-text").innerHTML = text;
-
+  document.getElementById("current-score").innerHTML = score.toString();
 }
 
 var explore = function (){
@@ -88,7 +90,7 @@ var explore = function (){
   var text = "As you approach you make out the sound of music. It gets louder and louder followed by the loud thumps of dancing. You thought these only existed in fiction, but you have encountered a mythical Werewolf Barmitzvah! Boys becoming men. Men becoming wolves. 'Welcome, human!' An elderly werewolf exclaims. If you want to join our party as a guest, you’re going to have to impress us with some fresh dance moves. What dance do you try?";
 
   document.getElementById("game-text").innerHTML = text + "<br>" + "<button onClick='theRobot()'>Robot</button>"+"<button onClick='runningMan()'>Running Man</button>";
-
+  document.getElementById("current-score").innerHTML = score.toString();
 }
 var danceOff = function(danceMove){
 
@@ -131,6 +133,7 @@ var danceWin = function(){
   var text = "'I am most impressed. You are clearly the most interesting person in the world'- The Elder Wolf says. After a night of partying with your new pack of friends, you finally have the inspiration you’ve been looking for to finish that Twilight Fan Fic you’ve been working on for the last 3 years. This leads to you earning tens of internet dollars and a lifetime of happiness. Congratulations, you finished with a final score of " + score + "<br>" + "<button onClick='reset()'>Play Again</button>";
 
   document.getElementById("game-text").innerHTML = text;
+  document.getElementById("current-score").innerHTML = score.toString();
 }
 
 var danceLose = function(){
@@ -139,6 +142,7 @@ var danceLose = function(){
   var text = "'I’ve never seen something flail about aimless that much in my life. Fortunately, you won’t have much room to dance pathetically once you’re in my stomach.'- The Wolf says.  You always knew you should’ve taken a dance class instead of spending so much time on the computer. At least you don’t have too much time left to worry about it or your paltry score of " + score + "<br>" + "<button onClick='reset()'>Play Again</button>";
 
   document.getElementById("game-text").innerHTML = text;
+  document.getElementById("current-score").innerHTML = score.toString();
 }
 // Play Dracula, Van Helsing,
 var dracVanOld = function(playerChoice){
@@ -214,7 +218,7 @@ var dracWin = function(vampChoice){
   var text = "The vampire selected " + vampChoice + " and you won! Supremely impressed by your uncanny intellect the vampire decides to suck your blood anyway to absorb all that knowledge. It's a shame really because you could've written such good Twilight Fan-Fic about it... The end. You finished with a score of " + score + "<br>" + "<button onClick='reset()'>Play Again</button>";
 
   document.getElementById("game-text").innerHTML = text;
-
+  document.getElementById("current-score").innerHTML = score.toString();
 
 }
 
@@ -224,7 +228,7 @@ var dracLoss = function(vampChoice){
   var text = "The vampire selected " + vampChoice + " and you lost! Disgusted by your lack of ingenuity, the vampire decides it would be best if there wasn't an immortal version of you and spares you. Screaming like a mad man, you run home and never sleep well again. The End. You finished with a score of " + score + "<br>" + "<button onClick='reset()'>Play Again</button>";
 
   document.getElementById("game-text").innerHTML = text;
-
+  document.getElementById("current-score").innerHTML = score.toString();
 
 }
 
@@ -235,11 +239,12 @@ var dracTie = function(vampChoice){
     var text = "The vampire selected " + vampChoice + " and you tied! Having met his intellectual equal, the vampire decides make you immortal so you can be best buds and drink blood beers while watching bloodball or whatever it is vampire bros do. The End. You finished with a score of  " + score + "<br>" + "<button onClick='reset()'>Play Again</button>";
 
     document.getElementById("game-text").innerHTML = text;
-
+    document.getElementById("current-score").innerHTML = score.toString();
 
   }
 
   var reset = function (){
     score = 0;
+    document.getElementById("current-score").innerHTML = score.toString();
     start();
   }

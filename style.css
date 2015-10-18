@@ -9,7 +9,7 @@ p{
   color: red;
 }
 #game-text{
-  height: 400px;
+  height: 200px;
   width: 98%;
   margin: 0 auto;
   background-color: white;
@@ -19,11 +19,20 @@ p{
 
 }
 #score{
-  height: 200px;
-  width: 20%;
-  display: inline-block;
+  height: 30px;
+  width: 10%;
+  display: inline;
   background-color: gray;
   border: 2px dotted black;
+  text-align: left;
+}
+#current-score{
+  height: 30px;
+  width: 78%;
+  display: inline;
+  background-color: yellow;
+  border: 2px dotted black;
+  text-align: left;
 }
 #choices{
   height: 200px;
