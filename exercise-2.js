@@ -228,6 +228,8 @@ var decreaseScore = function() {
 
 // Put your answer below -------------------------
 
+// wrap it in a function so that it cannot be accessed globally
+
 (function(){
     var score = 0;
 })();

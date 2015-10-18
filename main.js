@@ -1,4 +1,6 @@
 
+
+//my totes hackable score
 var score = 0;
 
 
@@ -87,11 +89,13 @@ var runAway = function (){
 var explore = function (){
   score += 10;
 
-  var text = "As you approach you make out the sound of music. It gets louder and louder followed by the loud thumps of dancing. You thought these only existed in fiction, but you have encountered a mythical Werewolf Barmitzvah! Boys becoming men. Men becoming wolves. 'Welcome, human!' An elderly werewolf exclaims. If you want to join our party as a guest, you’re going to have to impress us with some fresh dance moves. What dance do you try?";
+  var text = "As you approach you make out the sound of music. It gets louder and louder followed by the loud thumps of dancing. You thought these only existed in fiction, but you have encountered a mythical Werewolf Barmitzvah! Boys becoming men. Men becoming wolves. 'Welcome, human!' An elderly werewolf exclaims. 'If you want to join our party as a guest, you’re going to have to impress us with some fresh dance moves.' What dance do you try?";
 
   document.getElementById("game-text").innerHTML = text + "<br>" + "<button onClick='theRobot()'>Robot</button>"+"<button onClick='runningMan()'>Running Man</button>";
   document.getElementById("current-score").innerHTML = score.toString();
 }
+
+
 var danceOff = function(danceMove){
 
 //Success weighted by general move awesomeness with the Robot being better
