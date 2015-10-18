@@ -22,24 +22,16 @@ p{
   height: 30px;
   width: 10%;
   display: inline;
-  background-color: gray;
-  border: 2px dotted black;
   text-align: left;
+  padding: 0 3px;
 }
 #current-score{
   height: 30px;
   width: 78%;
   display: inline;
-  background-color: yellow;
-  border: 2px dotted black;
   text-align: left;
-}
-#choices{
-  height: 200px;
-  width: 78%;
-  background-color: yellow;
-  display: inline-block;
-  border: 2px dotted black;
+  padding: 0 3px;
+
 }
 
 button{
